@@ -37,6 +37,7 @@ class Solution:
                             return self.minNumberInRotateArray(target_list)
                         else:
                             return target_list
+                        
     def if_order(self, list_):
         if list_[0] <= list_[-1]:
             return True
