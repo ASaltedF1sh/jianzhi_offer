@@ -21,8 +21,6 @@ class Solution:
 		if len(path) == 0:
 			return True
 		else:
-			height, width = (4,4)
-
 			next_point = []
 			if rows - 1 >= 0:
 				next_point.append([rows - 1, cols])
