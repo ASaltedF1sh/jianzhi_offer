@@ -5,7 +5,7 @@ class Solution:
 		for h in range(height):
 			for w in range(width):
 				if matrix[h][w] == path[0]:
-					current_matrix =matrix.copy()
+					current_matrix = matrix.copy()
 					current_matrix[h][w] = '@'
 					current_path = path.copy()
 					current_path.pop(0)
