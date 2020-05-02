@@ -21,6 +21,7 @@ class Solution:
 			return True
 		else:
 			next_point = []
+			height, width = matrix.shape
 			if rows - 1 >= 0:
 				next_point.append([rows - 1, cols])
 			if rows + 1 <= height - 1:
@@ -33,7 +34,6 @@ class Solution:
 			if len(next_point) == 0:
 				return False
 			else:
-				height, width = matrix.shape
 				for h ,w in next_point:
 						if matrix[h][w] == path[0]:
 							current_matrix = matrix.copy()
