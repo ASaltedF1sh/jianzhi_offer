@@ -49,15 +49,3 @@ class Solution:
 							if result:
 								return True
 				return result
-
-
-
-
-if __name__ == '__main__':
-
-	mymatrix = 				[['a', 'a', 'a', 'a'],
-						 ['a', 'a', 'a', 'a'],
-						 ['a', 'a', 'a', 'a'],
-						 ['a', 'a', 'a', 'a']]
-						
-	print(hasPath(mymatrix,'aaaaaaaaaaaaaa'))
