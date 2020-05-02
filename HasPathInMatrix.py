@@ -1,6 +1,7 @@
 class Solution:
 	def hasPath(self, matrix, path):	
 		result = False
+		height, width = matrix.shape
 		for h in range(height):
 			for w in range(width):
 				if matrix[h][w] == path[0]:
@@ -32,6 +33,7 @@ class Solution:
 			if len(next_point) == 0:
 				return False
 			else:
+				height, width = matrix.shape
 				for h ,w in next_point:
 						if matrix[h][w] == path[0]:
 							current_matrix = matrix.copy()
