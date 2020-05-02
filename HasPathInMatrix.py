@@ -1,10 +1,8 @@
 import numpy as np
 
 class Solution:
-	def hasPath(self, matrix, path):
-		
+	def hasPath(self, matrix, path):	
 		result = False
-
 		for h in range(height):
 			for w in range(width):
 				if matrix[h][w] == path[0]:
@@ -19,7 +17,6 @@ class Solution:
 		return result
 
 	def searchPath(self, matrix, rows, cols, path):
-
 		result = False
 		if len(path) == 0:
 			return True
