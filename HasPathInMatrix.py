@@ -1,5 +1,3 @@
-import numpy as np
-
 class Solution:
 	def hasPath(self, matrix, path):	
 		result = False
