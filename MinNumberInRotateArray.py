@@ -23,7 +23,7 @@ class Solution:
                     elif list1[-1] > list2[0]:
                         return self.minNumberInRotateArray(list2)
                     else:
-                        for i, j in zip(list1[:-1][::-1],list2[1:]):
+                        for i, j in zip(list1[:-1][::-1], list2[1:]):
                             if i < j:
                                 target_list = list1
                                 break
@@ -37,7 +37,7 @@ class Solution:
                             return self.minNumberInRotateArray(target_list)
                         else:
                             return target_list
-    def if_order(self,list_):
+    def if_order(self, list_):
         if list_[0] <= list_[-1]:
             return True
         else:
