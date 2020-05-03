@@ -1,7 +1,7 @@
 class Solution:
 	def GetUglyNumber_Solution(self, index):
 
-		if index<=0:
+		if index <= 0:
 			return 0
 		else:
 			ugly_list = [1] * index
