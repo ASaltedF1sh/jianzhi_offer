@@ -8,4 +8,4 @@ class Solution:
             pillar_count = 0
             for i in range(1, len(pillar_list) - 1):
                 pillar_count += func(pillar_list[:i], pillar_list[i+1:], pillar_list[i])
-        return pillar_count
+            return pillar_count
