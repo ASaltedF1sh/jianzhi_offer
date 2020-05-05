@@ -6,7 +6,7 @@ class Solution:
         if left < headsize and mylist[left] > mylist[large_index]:
             large_index = left
         if right < headsize and mylist[right] > mylist[large_index]:
-            large_index =right
+            large_index = right
         if large_index != root_index:
             mylist[large_index], mylist[root_index] = mylist[root_index], mylist[large_index]
             self.max_head(mylist, headsize, large_index)
