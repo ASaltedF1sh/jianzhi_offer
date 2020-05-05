@@ -20,7 +20,7 @@ class Solution:
                 ArrayB.pop(0)
                 lenB -= 1
         
-        target_num = [(lenA + lenB + 1) // 2]
+        target_num = (lenA + lenB + 1) // 2
 
         result = self.binary_search(ArrayA, ArrayB, target_num, odd)
         if result:
