@@ -6,7 +6,7 @@ class Solution:
 
         else:
             p_fast = pHead.next.next
-            p_slow = pHead
+            p_slow = pHead.next
             
             #判断是否成环
             while p_fast != p_slow:
