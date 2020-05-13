@@ -18,4 +18,4 @@ class Solution:
                     queue.append(node.right)
             ans.append(cur)
 
-        return ans 
+        return ans
