@@ -4,8 +4,6 @@ class Solution:
         ans = []
 
         def helper(i, tmp, ind_list):
-            # print(tmp)
-            # print(ans)
             if len(tmp) == n:
                 ans.append(tmp)
                 return
