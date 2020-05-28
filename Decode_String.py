@@ -59,8 +59,8 @@ class Solution:
 class Solution:
     def decodeString(self, s: str) -> str:
         import re
-        def convert(matched):
-            return int(matched(0)) * matched(1)
+        def f(m):
+            return int(m.group(1))* m.group(2)
         while '[' in s:
-            s = re.sub(r'(\d+)\[([A-Za-z]*)\]', convert, s)
+            s = re.sub(r'(\d+)\[([A-Za-z]*)\]', f, s)
         return s
