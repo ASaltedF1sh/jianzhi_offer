@@ -1,0 +1,7 @@
+class Solution:
+    def sumNums(self, n: int) -> int:
+        return sum(range(1, n + 1))
+        
+class Solution:
+    def sumNums(self, n: int) -> int:
+        return n and (n + self.sumNums(n-1))
