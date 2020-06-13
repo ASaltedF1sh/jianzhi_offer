@@ -55,4 +55,4 @@ class Solution:
                                 hashmap[i] = 0
                     else:
                         return min_heap[0][0]
-        return min_heap[0][0]
+        return min_heap[0][0] 
