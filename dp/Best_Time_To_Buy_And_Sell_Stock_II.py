@@ -31,4 +31,4 @@ class Solution:
             if prices[i] > tmp:
                 ans += prices[i] - tmp
             tmp = prices[i]
-        return ans
+        return ans 
