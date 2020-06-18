@@ -8,4 +8,4 @@ class Solution:
         for i in range(1, days):
             dp[i] = max(dp[i - 1], prices[i] - min_price)
             min_price = min(min_price, prices[i])
-        return max(dp)
+        return max(dp) 
