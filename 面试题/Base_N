@@ -1,0 +1,9 @@
+class Solution:
+    def convertToBaseN(self, num, base) -> str:
+        tmp = abs(num)
+        ans = []
+        while tmp >= base:
+            ans.append(str(tmp % base))
+            tmp = tmp // base
+        ans.append(str(tmp))
+        return '-' + ''.join(reversed(ans)) if num < 0 else ''.join(reversed(ans))
