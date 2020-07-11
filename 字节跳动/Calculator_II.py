@@ -65,4 +65,4 @@ class Solution:
                 res += stack.pop() # stack pop 2, operand
                 operand = 0
 
-        return res + sign * operand
+        return res + sign * operand 
