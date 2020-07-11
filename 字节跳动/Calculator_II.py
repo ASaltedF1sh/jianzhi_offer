@@ -31,7 +31,7 @@ class Solution:
             return sum(stack)
         return helper(deque(s))
 
-#栈解法
+#栈解法（不适用于有乘除）
 class Solution:
     def calculate(self, s: str) -> int:
         stack = []
