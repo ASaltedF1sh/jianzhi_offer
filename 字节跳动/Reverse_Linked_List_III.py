@@ -48,4 +48,4 @@ if __name__ == '__main__':
     Node = Solution().reverseLast(Node1, 3)
     while Node:
         print(Node.val)
-        Node = Node.next
+        Node = Node.next 
