@@ -53,3 +53,46 @@ class Solution:
         for i in range(1, len(ans)):
             ans_.append(ans[i] - ans[i-1])
         return ans_
+
+    
+        #差分法,一样不好处理孤立的字符，如vhaagbqkaq中的v，到底是能单独成为一个区间还是不能呢？
+    def partitionLabels(self, S):
+
+        dic, st = dict(), set()
+        for i in range(len(S)):
+            if S[i] not in dic:
+                dic[S[i]] = [i, -1]
+            else:
+                dic[S[i]][-1] = i
+
+        res = [0] * len(S)
+        #只出现一次的元素不计入差分中，而是放在集合中单独讨论，即如果遍历到只出现一次元素时
+        #当前总和不为0，说明该只出现一次的元素时内嵌在其他区间内的，忽略掉，否则可以单独成为长度为1的区间
+        for k, v in dic.items():
+            if v[-1] == -1:
+                st.add(k)
+            else:
+                res[v[0]] += 1
+                res[v[1]] -= 1
+
+        tmp, ans, s = 0, [], ''
+        for i in range(len(res)):
+            tmp += res[i]
+            if not tmp:
+                if i < len(res) and S[i] in st:
+                    ans.append(1)
+                    continue
+            #如果当前总和不为0，说明还是一个整体区间，因此区间长度进一步扩大
+            if tmp:
+                s += S[i]
+            #如果当前总和为0，说明区间已经结束了。如果res[i]不为0，说明本次刚刚结束，本次长度也要计入
+            #否则区间是之前结束的，直接加入暂存区间的长度即可
+            if not tmp:
+                if res[i]:
+                    s += S[i]
+                ans.append(len(s))
+                s = ''          
+        return ans       
+
+if __name__ == "__main__":
+    print(Solution().partitionLabels(""))
